@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - E-Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>E-Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="product" id="product-detail">
+    <h2>Product Details</h2>
+    <!-- Rendered by JS -->
+  </section>
+  <footer>&copy; 2025 E-Shop</footer>
+  <script src="script.js"></script>
+  <script>
+    // For demo, render product 1; pass ID via URL param in real use: new URLSearchParams(window.location.search).get('id')
+    renderProducts('#product-detail', 1);
+    document.querySelector('#product-detail .btn').onclick = () => addToCart(1);
+  </script>
+</body>
+</html>
